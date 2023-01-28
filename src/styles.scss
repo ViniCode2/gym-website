@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+// ESTILIZADO BARRA DE ROLAGEM
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #18181B;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1B1619;
+  border-radius: 20px;
+  border: 1px solid #3b9b39;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// ANIMAÇÃO DA SIDEBAR
+  .compact-nav{
+    transition: width 0.35s;
+  }
+
+  .animation {
+    animation-duration: 0.30s;
+    animation-name: animação;
+    animation-iteration-count: 1;
+  }
+
+    @keyframes animação {
+      from {
+        margin-left: 100%;
+        width: 300%;
+      }
+
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+
+// AÇÃO "VOLTAR PARA CIMA"
+    .animate-bounce{
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+          transform: translateY(-25%);
+          animation-timing-function: cubic-bezier(0.8,0,1,1);
+      }
+      50% {
+          transform: none;
+          animation-timing-function: cubic-bezier(0,0,0.2,1);
+      }
+  }
+
+// ANIMAÇÃO DE BOTÃO (ESCALA)
+
+  .transform-size {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }

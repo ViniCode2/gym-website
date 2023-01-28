@@ -1,0 +1,56 @@
+<section class="w-screen h-screen relative flex flex-row bg-[#3b9b39]">
+
+  <!-- div color -->
+   <div class="w-full h-full">
+     <div class="h-screen w-[80%] bg-cover " style="background-image: url(../assets/image/image.png);"></div>
+   </div>
+   <div class="absolute w-[80%] h-full bg-[#000000ab]"></div>
+   <div class="absolute p-4">
+     <img src="../assets/image/logo-vfitness.svg" alt="logo">
+   </div>
+
+ <!-- position absolute -->
+   <div class="w-sreen h-screen flex absolute">
+     <div class="w-screen h-screen flex justify-center items-center pl-[650px]">
+       <div class="w-[350px] h-[500px] flex flex-col p-10 rounded bg-zinc-900 shadow-[#0E0C0E] shadow-2xl">
+         <div class="flex justify-center m-10 text-white text-">
+           <h1 class="text-4xl" style="font-family: 'Ubuntu', sans-serif;">Login</h1>
+         </div>
+         <div>
+           <form class="flex items-center flex-col">
+
+             <div class="pb-10">
+               <label class="pr-2" for="email"><i class="bi bi-person text-white"></i></label>
+               <input
+               id="email"
+               [(ngModel)]="login.email" name="email"
+               class="outline-0 border-solid border-b-2  border-white bg-transparent text-white"
+               type="email"
+               placeholder="Digite seu email">
+             </div>
+             <div>
+               <label class="pr-2" for="password"><i class="bi bi-key text-white"></i></label>
+               <input
+               id="senha"
+               [(ngModel)]="login.senha" name="senha"
+               class="outline-0 border-solid border-b-2  border-white bg-transparent text-white"
+               type="password"
+               placeholder="Digite sua senha">
+             </div>
+             <div class="w-full pt-10 flex justify-end text-[#B8B8B8] ">
+               <span class="text-sm">Esqueceu a senha?</span>
+             </div>
+             <div class="pt-10">
+               <button
+               (click)="fazerLogin()"
+               type="submit"
+               class="bg-[#3B9B39] text-white px-14 rounded py-1 hover:bg-[#2c722b] shadow-[#0E0C0E] shadow-lg">Entrar</button>
+             </div>
+
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+
+ </section>

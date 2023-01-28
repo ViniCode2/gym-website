@@ -1,0 +1,77 @@
+<div class="overflow-hidden compact-nav bg-[#18181B] h-full fixed left-0 bottom-0 top-0 z-50 p-3 pt-8 w-20 border-r-[3px] border-[#3B9B39] hover:w-64 hover:shadow-2xl hover:shadow-black"
+    (mouseover)="toggleMenu()"
+    (mouseout)="toggleMenu()">
+
+    <div class="w-14 h-14 absolute right-0 mr-[10px] rounded-full bg-[#3B9B39] border-2 border-[#18181B] flex justify-center items-center group-hover:w-full">
+      <i class="bi bi-menu-up text-white text-3xl"></i>
+    </div>
+    <div class="w-full h-full flex items-end">
+      <div class="h-[calc(100%-48px)] w-full">
+
+        <div class="w-full h-full pt-12  flex flex-col gap-10">
+          <!-- options -->
+          <div class="w-full bg-[#3B9B39] cursor-pointer rounded-2xl p-2 hover:bg-[#2c722b] hover:shadow-xl hover:shadow-black">
+            <a class="text-white  w-max flex flex-row items-center gap-4">
+              <i class="bi bi-card-list text-white text-2xl ml-[7px]"></i>
+              <div class="w-full overflow-hidden">
+                <span [class]="toggle ? 'hidden' : 'block' " class="animation">
+                  Ficha completa
+                </span>
+              </div>
+            </a>
+          </div>
+          <div class="w-full bg-[#3B9B39] cursor-pointer rounded-2xl p-2 hover:bg-[#2c722b] hover:shadow-xl hover:shadow-black">
+            <a class="text-white  w-max flex flex-row items-center gap-4">
+              <i class="bi bi-person-fill-add text-white text-2xl ml-[7px]"></i>
+              <div class="w-full overflow-hidden">
+                <span [class]="toggle ? 'hidden' : 'block' " class="animation">
+                  Cadastro de aluno
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="w-full bg-[#3B9B39] cursor-pointer rounded-2xl p-2 hover:bg-[#2c722b] hover:shadow-2xl hover:shadow-black">
+            <a class="text-white  w-max flex flex-row items-center gap-4">
+              <i class="bi bi-emoji-smile-fill text-white text-2xl ml-[7px]"></i>
+              <div class="w-full overflow-hidden">
+                <span [class]="toggle ? 'hidden' : 'block' " class="animation">
+                  Informações de login
+                </span>
+              </div>
+            </a>
+          </div> -->
+
+          <div class="w-full bg-[#3B9B39] rounded-2xl p-2 hover:shadow-xl hover:shadow-black">
+            <a class="text-white  w-max flex flex-row items-center gap-4">
+              <i class="bi bi-geo-alt text-white text-2xl ml-[7px]"></i>
+              <div class="w-full overflow-hidden">
+                <span [class]="toggle ? 'hidden' : 'block' " class="animation font-bold">
+                  Endereço da   acadamia
+                </span>
+                <div [class]="toggle ? 'hidden' : 'block' " class="flex flex-col animation pt-4">
+                  <span>Rua Franklin José Vieira,</span>
+                  <span>ao lado do Bradesco,</span>
+                  <span>Ipaporanga/Ce</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- exit -->
+          <div class="w-full h-full flex items-end">
+            <a href="../../../firstpage/firstpage.component.html"
+              class="gap-3 w-max flex flex-row items-center p-2 bg-[#3B9B39] hover:bg-[#2c722b] rounded-2xl cursor-pointer hover:shadow-xl hover:shadow-black">
+              <i class="bi bi-box-arrow-left text-white text-3xl pr-2"></i>
+              <span [class]="toggle ? 'hidden' : 'block' " class="animation text-white">
+                Sair
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+
+<!--  -->
